@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny day</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="main-page-container">
+        <h1 class="website-name">Sunny day</h1>
+        <p class="mini-description">Check the weather of any location in the world, with accurate and trusted results</p>
+        <div class="button-text-container">
+            <p>want to check the weather of a sepcefic location ? click here !</p>
+            <button onclick="location.href='#search-location'" id="search-location-btn">Search a location </button>
+        </div>
+    </div>
+    <div id="search-location">
+        <form id="search-location-form">
+            <div id="location-container">
+                <label for="location-text" id="location-label">Enter your location :</label>
+                <span>Respect the format "city, country" for more precise results</span>
+                <input type="text" id="location-text" required>
+            </div>
+            <div id="temp-container">
+                <label for="temp-unit">Temperature unit :</label>
+                <select id="temp-unit">
+                    <option value="celcius">°C</option>
+                    <option value="fahrenheit">°F</option>
+                </select>
+            </div>
+            <button type="submit" id="check-weather">check weather</button>
+            <p id="errorMessage"></p>
+        </form>
+    </div>
+</body>
+</html>
